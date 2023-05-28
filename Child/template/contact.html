@@ -1,0 +1,63 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<div style="margin-top: 100px;" class="contact">
+<div class="container">
+  {% for msg in messages %}
+  {{msg}}
+    {% endfor %}
+    <div style="text-align: center;" class="pic">
+   <img style="width: 500px;" src="../static/img/3.jpg">
+</div>
+<h2 style="text-align: center; color: red;">Contact us</h2>
+<p style="text-align: center;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse saepe, officia facilis sunt eos maxime quas vel corrupti velit sequi accusantium fuga id tempora ex aut totam ut ab nulla?</p>
+<hr>
+<div class="row">
+    <div style="text-align: center;" class="col-4">
+        <img style="width: 50px; text-align: center;" src="static/img/home-address.png" alt="">
+        <h4>Address</h4>
+        <p style="color: gray;">Khilgaon Dhaka, 1219</p>
+    </div>
+    <div style="text-align: center;" class="col-4">
+        <img style="width: 50px; text-align: center;" src="static/img/phone-call.png" alt="">
+   <h4>Phone</h4>
+   <p style="color: gray;">+8801325663699</p>
+    </div>
+    <div style="text-align: center;" class="col-4">
+        <img style="width: 50px; text-align: center;" src="static/img/envelope.png" alt="">
+    <h4>Email</h4>
+    <p style="color: grey;">childcarebd@gmail.com</p>
+    </div>
+    <hr>
+</div>
+<div style="text-align: center;" class="form">
+<form method="post" action="">
+    {% csrf_token %}
+    <div class="mb-3">
+      Name:
+      <input style="width: 800px; margin-left: 80px;" type="text" id="name" name="name" placeholder="Enter your username">
+    </div>
+    <div class="mb-3">
+        Email Address:
+        <input style="width: 800px; margin-left: 23px;" type="email"  id="email" name="email" placeholder="Enter your email address">
+      </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Phone Numeber:</label>
+      <input style="width: 800px; margin-left: 6px;" type="phone" id="phone" name="phone" placeholder="Enter your Phone Number">
+    </div>
+    <div class="form-group">
+        Description:
+        <textarea style="width: 800px; margin-left: 42px;" id="desc" rows="3" name="desc" placeholder="Write here..."></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary my-2">Submit</button>
+  </form>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+{% endblock %}

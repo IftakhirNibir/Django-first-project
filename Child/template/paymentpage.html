@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+{% block body %}
+
+
+<div style="margin-top: 100px; margin-bottom: 100px; " class="contact">
+<div class="container">
+    <h2 style="text-align: center;color: red; margin-bottom: 40px;">Payment methods</h2>
+    <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h1 class="card-title">Bkash</h1>
+              <p class="card-text">bKash is the fastest and safest medium of financial transaction, bKash makes your life simple with Send Money, Add Money, Pay Bill, Mobile Recharge, Payment and many more services.</p>
+              <a href="{% url 'bkashpage' %}" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h1 class="card-title">Nagad</h1>
+              <p class="card-text">Nagad is an innovative and promising digital financial service of Bangladesh Post Office that embarked upon a glorious journey on March 26, 2019.</p>
+              <a href="{% url 'nagadpage' %}" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+<style>
+   .card{
+      border-radius: 10px 10px 10px 10px;
+    }
+    .card:hover{
+        color: tomato;
+        box-shadow: 10px 10px 20px grey;
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+{% block body %}
+<div style="margin-top: 100px;" class="contact">
+<h2 style="text-align: center; color: red;">Schools Booking</h2>
+
+<div class="container">
+<div class="row my-4">
+<div class="col-6">
+    <div class="img" >
+        <img style="width: 400px;" src="../static/img/school.png"  alt="loading...">
+    </div>
+</div>
+    <div class="col-6">
+<form method="post" id="schoolForm" data-schools-url="{% url 'ajax_load_schools' %}">
+  {% csrf_token %}
+   {{form.as_p}}
+   <hr>
+   <input type="submit">
+</form>
+    </div>
+    </div>
+</div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+    <script>
+      $("#id_district").change(function () { //This is id of the address field.
+        const url = $("#schoolForm").attr("data-schools-url");  // get the url of the `load_schools` view. ID and attr from the schoolform
+        const districtId = $(this).val();  // get the selected address ID from the HTML input
+
+        $.ajax({                       // initialize an AJAX request
+            url: url,                    // set the url of the request (= ajax/load-schools/ )
+            data: {
+                'district_id': districtId       // add the address id to the GET parameters(So we can filter at the backend)
+            },
+            success: function (data) {   // `data` is the return of the `load_schools` view function
+                $("#id_school").html(data);  // replace the contents of the school input with the data that came from the server
+               
+            }
+        });
+
+    });
+</script>
+
+{% endblock %}

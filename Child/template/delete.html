@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+{% block body %}
+{% load static %}
+<div style="margin-top: 100px; margin-bottom: 200px;" class="contact">
+<div class="container">
+    <div style="text-align: center;padding-top: 150px;" class="a">
+<p> Are you sure you want to delete the post?</p>
+<form method="POST">
+				
+    {% csrf_token %}
+    <a style="margin-right:20px" href="{{request.META.HTTP_REFERER}}">Cancel</a>
+
+    <input type="submit" name="Confirm">
+</form>
+    </div>
+    </div>
+    </div>
+
+{% endblock %}

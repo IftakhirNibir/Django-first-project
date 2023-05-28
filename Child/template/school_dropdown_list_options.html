@@ -1,0 +1,4 @@
+<option value="">---------</option>   //Rendering the options for that school
+{% for s in schools %}
+<option value="{{ s.pk }}">{{ s.name }}</option>
+{% endfor %}

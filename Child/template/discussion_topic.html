@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<div style="margin-top: 100px;" class="contact">
+    <div class="container">
+        <div style="text-align: center;" class="img">
+            <img style="width: 500px; height: 300px;" src="../static/img/blog_post.gif"  alt="">
+        </div>
+        {% if request.user.is_staff %}
+    <a class="btn btn-sm btn-danger" href="{% url 'createDiscussion' %}" style="margin: 4px;">Create Discussion</a>
+    {% endif %}
+        {% for i in room %}
+             <h3 style="color: gray;"><img style="margin-right: 5px; margin-bottom: 2px;" src="{{i.host.customer.profile_pic.url}}" alt="Bootstrap" width="35" height="35" class="rounded-circle border border-dark">{{i.host.customer.username}}</h3>
+             <p>{{i.created}}</p>
+             {% if i.host == request.user %}
+             <a href="{% url 'updateDiscussion' i.id %}">Edit</a>
+             <a href="{% url 'deleteDiscussion' i.id %}">Delete</a>
+             {% endif %}
+             <h5>Title: <a style="text-decoration:none" href="{% url 'discussion' i.id %}">{{i.name}}</a></h5>
+             <p>Main discussion about {{i.topic.name}}</p>
+             <p>{{i.description}}</p>
+             <hr>
+             {% endfor %}
+    
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<div style="margin-top: 100px;" class="contact">
+    <div class="container">
+        <h2 style="text-align: center; color: red;">About page</h2>
+        <div class="row">
+            <div class="col-6">
+        <div style="text-align: left;" class="image">
+            <img style="width: 380px;" src="../static/img/2" alt="">
+        </div>
+            </div>
+            <div class="col-6">
+                <div style="text-align: center;" class="img">
+                <img style="width: 280px;" src="../static/img/2.jpg" alt="">
+                </div>
+                <div style="margin-bottom: 15px;" class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Daycare Service
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <h6>Daycare service provider shares their information with us. So you can see their service criteria and contact them. We first ensure the safety of your children.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Admission School
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <h6>Some schools try to teach poor children without any cost. So we communicate with them, and they share a few percentages of service with us. Find your nearby location.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Baby Products
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <h6>Mee Mee, Johnson, and Chicco are the big brands of baby products. They share their services with us. Here you can order their products at a lower cost.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

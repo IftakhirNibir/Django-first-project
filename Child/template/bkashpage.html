@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<div style="margin-top: 100px;" class="contact">
+<div class="container">
+    {% for msg in messages %}
+    {{msg}}
+      {% endfor %}
+    <div style="text-align: center;" class="nagad">
+        <div class="img-container">
+            <img  height="200px" width="450px" class="center" src="../static/img/bkash_payment_logo.png">
+            </div>
+    <p>Send Money allows you to transfer money from your bKash Account to another bKash Account. To send money:<br>
+
+        01. Go to your bKash Mobile Menu by dialing *247#<br>
+        02. Choose “Send Money”<br>
+        03. Enter Our bKash Account Number (+880171819140)<br>
+        04. Enter the amount you want to send<br>
+        05. Enter a reference about the transaction. (Do not use more than one word, avoid space or special characters)<br>
+        06. Now enter your bKash Mobile Menu PIN to confirm the transaction</p>
+        <div style="border: 1px solid black;" class="p">
+          <p style="color: red">**Select donation option for donate money</p>
+        </div>
+    </div>
+        <div class="container">
+            <form action="" method="post">
+              {% csrf_token %}
+               {{form.as_p}}
+               <hr>
+               <input type="submit">
+            </form>
+                </div>
+</div>
+</div>
+{% endblock %}

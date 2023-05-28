@@ -1,0 +1,83 @@
+{% extends 'index.html' %}
+{% block body %}
+
+ <!--Features-->   
+ <div class="container">
+    <h2 style="text-align: center; color: red;">
+        Features
+    </h2>
+    <hr>
+    {% for msg in messages %}
+    {{msg}}
+      {% endfor %}
+
+      <style>
+        .featurecol{
+            animation: fadeInAnimation ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <h1 style="color: red;">Welcome to our page<hr></h1>
+    <div style="text-align: center" class="image">
+      <img width="650px" src="../static/img/6.png" alt="">
+    </div>
+    <h2 style="text-align: center; color: red;" >Our Features</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
+     <div class="featurecol">
+             <div class="fa-help">
+                 <img style="width: 35px; text-align: center;" src="static/img/care.png" alt="">
+                 </div>
+         <h2 style="margin-top: 10px;">Help</h2>
+       <i class="fa-solid fa-handshake-angle"></i>
+       <p>We collect information about poor children and share their documents with the people. So that people can help them and donate money for them.</p>
+       <a href="{% url 'helppage' %}" class="icon-link">
+         Call to action
+         <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+       </a>
+     </div>
+     <div class="featurecol">
+         <div class="fa-help">
+             <img style="width: 35px; text-align: center;" src="static/img/university.png" alt="">
+             </div>
+       <h2 style="margin-top: 10px;">School</h2>
+       <p>Some schools try to teach poor children without any cost. So we communicate with them, and they share a few percentages of service with us. Find your nearby location.</p>
+       <a href="{% url 'addschool' %}" class="icon-link">
+         Call to action
+         <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+       </a>
+     </div>
+     <div class="featurecol">
+         <div class="fa-help">
+             <img style="width: 35px; text-align: center;" src="static/img/carer.png" alt="">
+             </div>
+       <h2 style="margin-top: 10px;">Daycare</h2>
+       <p>Daycare service provider shares their information with us. So you can see their service criteria and contact them. We first ensure the safety of your children.</p>
+       <a href="{% url 'daycare' %}" class="icon-link">
+         Call to action
+         <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+       </a>
+     </div>
+     <div class="featurecol">
+         <div class="fa-help">
+             <img style="width: 35px; text-align: center;" src="static/img/stroller.png" alt="">
+             </div>
+         <h2 style="margin-top: 10px;">Product</h2>
+         <p>Mee Mee, Johnson, and Chicco are the big brands of baby products. They share their services with us. Here you can order their products at a lower cost.</p>
+         <a href="{% url 'productpage' %}" class="icon-link">
+           Call to action
+           <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+         </a>
+       </div>
+   </div>
+   </div>
+{% endblock %}

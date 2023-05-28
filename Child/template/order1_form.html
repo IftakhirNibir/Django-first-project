@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<div style="margin-top: 100px;" class="contact">
+    <div class="container">
+<div class="row">
+	<div style="margin-bottom: 145px;" class="col-md-6">
+		<div class="card card-body">
+			{% for msg in messages %}
+			{{msg}}
+			  {% endfor %}
+
+			<form method="POST">
+				{% csrf_token %}
+				{{ form.management_form }}
+				{% for field in form %}
+					{{field}}
+					<hr>
+				{% endfor %}
+				
+				<input type="submit" name="Submit">
+			</form>
+		</div>
+	</div>
+    <div class="col-md-6">
+        <div class="card text-center" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">View your ordered list</h5>
+              <p class="card-text">Go to you profile page you can see your ordered list</p>
+              <a href="{% url 'orderedpage' %}" class="btn btn-primary">Go here</a>
+            </div>
+          </div>
+    </div>
+</div>
+    </div>
+</div>
+{% endblock %}

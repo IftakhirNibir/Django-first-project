@@ -1,0 +1,55 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<div style="margin-top: 100px;" class="contact">
+    <div class="container">
+<h2 style="text-align: center; color: red;">Baby Products</h2>
+<hr>
+<div class="row">
+    <div class="col-4">
+        <div class="card" style="width: 18rem;">
+            <img src="../static/img/p1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Mee Mee</h5>
+              <p class="card-text">Bathing products include shampoos, hats, bubble baths, napkins, baby towels, and other bath products.</p>
+              <a href="https://meemee.in/" target="_blank" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </div>
+    <div class="col-4">
+        <div class="card" style="width: 18rem;">
+            <img src="../static/img/p2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Johnson</h5>
+              <p class="card-text">Johnsons baby care collection is an exclusive gifting collection, carefully selected to help a new mother to care her children.</p>
+              <a href="https://www.jnj.com/" target="_blank" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </div>
+    <div class="col-4">
+        <div class="card" style="width: 18rem;">
+            <img src="../static/img/p3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Chicco</h5>
+              <p class="card-text">Everything you need to care for your baby doll is included in the Chicco Nursery Time Fun. Start the day by taking care for your baby.</p>
+              <a href="https://www.chiccousa.com/" target="_blank" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </div>
+</div>
+{% if request.user.is_staff == False %}
+<div class="card text-center my-2">
+    <div class="card-header">
+      Featured
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Order Item</h5>
+      <p class="card-text">Here you can create multiple orders.</p>
+      <a href="{% url 'createOrder' user.id%}" class="btn btn-primary">Chick here</a>
+    </div>
+  </div>
+  {% endif %}
+</div>
+    </div>
+
+{% endblock %}

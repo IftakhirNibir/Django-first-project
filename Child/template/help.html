@@ -1,0 +1,55 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<div style="margin-top: 100px;" class="contact">
+  <h2 style="text-align: center; color: red; margin-bottom: 20px;">Help for Donation</h2>
+    <div class="container">
+        {% for msg in messages %}
+        {{msg}}
+          {% endfor %}
+        <div class="row">
+            <div class="col-6">
+<img style="width: 300px;" src="../static/img/4.jpg" alt="">
+            </div>
+            <div class="col-6">
+              <form method="post" action="">
+                {% csrf_token %}
+                <div class="mb-3">
+                  Child_Name:
+                  <input style="width: 380px; margin-left: 40px;" type="text" id="childname" name="childname" placeholder="Enter children name">
+                </div>
+                <div class="mb-3">
+                    Address:
+                    <input style="width: 380px; margin-left: 68px;" type="text"  id="address" name="address" placeholder="Enter his home address">
+                  </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Contact No:</label>
+                  <input style="width: 380px; margin-left: 45px;" type="phone" id="contact" name="contact" placeholder="Enter his contact number">
+                </div>
+                <div class="form-group">
+                    Description:
+                    <textarea style="width: 380px; margin-left: 45px;" id="desc" rows="3" name="desc" placeholder="Write the reason here"></textarea>
+                </div>
+                <div class="mb-3">
+                  Bank AccNo:
+                  <input style="width: 380px; margin-left: 41px;" type="text"  id="account" name="account" placeholder="Enter his bank account number">
+                </div>
+                <button type="submit" class="btn btn-primary my-2">Submit</button>
+              </form>
+              If you want to make any change then <a href="{% url 'contactpage' %}">contact us.</a>
+            </div>
+        </div>
+
+        {% for i in h %}
+        <hr>
+        <p><i style="color: gray; font-size: x-large;">"{{i.desc}}"</i></p>
+        <p>Child_Name: {{i.childname}}. Contact no: {{i.contact}}. Bank Account Number: {{i.account}}</p>
+        {% if request.user.is_staff %}
+        <a href="{% url 'updatehelp' i.id%}">Update</a>
+        <a href="{% url 'deleteHelp' i.id%}">Delete</a>
+        {% endif %}
+        <a class="btn btn-sm btn-danger" href="{% url 'paymentpage' %}" style="margin: 4px;">Donation</a>
+        {% endfor %}
+    </div>
+
+{% endblock %}

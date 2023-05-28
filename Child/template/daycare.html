@@ -1,0 +1,54 @@
+{% extends 'index.html' %}
+{% block body %}
+
+
+<div style="margin-top: 100px;" class="contact">
+  <h2 style="text-align: center; color: red;">DayCare Service Provider</h2>
+    <div class="container">
+      <div style="text-align: center" class="img">
+        <img width="250px" src="../static/img/2837586.png" alt="">
+      </div>
+      {% for msg in messages %}
+        {{msg}}
+          {% endfor %}
+      <div style="text-align: center; margin-top: 10px;" class="daycare">
+        <form method="post" action="">
+            {% csrf_token %}
+            <div class="mb-3">
+              Organization Name:
+              <input style="width: 800px; margin-left: 20px;" type="text" id="organization_name" name="organization_name" placeholder="Enter your organization name here">
+            </div>
+            <div class="mb-3">
+                Location:
+                <input style="width: 800px; margin-left: 95px;" type="text"  id="location" name="location" placeholder="Enter your business location">
+              </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Service Time:</label>
+    <input style="width: 800px; margin-left: 68px;" type="text" id="service_time" name="service_time" placeholder="Enter your service_time here">
+            </div>
+            <div class="form-group">
+                Description:
+                <textarea style="width: 800px; margin-left: 78px;" id="desc" rows="3" name="desc" placeholder="Write here..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary my-2">Submit</button>
+          </form>
+          <hr>
+    </div>
+         {% for j in d %}
+         {% if j.approved %}
+           <h6>Organization Name: {{j.organization_name}}</h6>
+           <h6>Location: {{j.location}}</h6>
+           <h6>Service Time: {{j.service_time}}</h6>
+           <h6>Details: {{j.desc}}</h6>
+           {% endif %}
+           <hr>
+         {% endfor %}
+    </div>
+</div>
+
+<style>
+  h3{
+   color: grey; 
+  }
+</style>
+{% endblock %}

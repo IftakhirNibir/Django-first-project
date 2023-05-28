@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<div style="margin-top: 80px;" class="cointainer">
+    <div style="text-align: center;" class="img">
+        <h2 style="text-align: center; color: red;">My Profile</h2>
+<img style="width:300px; height:300px;border-radius: 100%; border: 2px solid black;" src="{{request.user.customer.profile_pic.url}}" alt="">
+<p style="text-align: center;color: red;">**Please update your necessary information</>
+</div>
+<div style="text-align: center;" class="card-body">
+
+    <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <div class="form__action">
+            <a class="btn btn--dark" href="{{request.META.HTTP_REFERER}}">Cancel</a>
+            <button class="btn btn--main" type="submit">Update</button>
+          </div>
+    </form>
+</div>
+
+{% endblock %}
