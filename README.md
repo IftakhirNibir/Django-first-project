@@ -7,8 +7,8 @@
 <img src="Child/static/videos.png">
 <img src="Child/static/payment.png">
 <img src="Child/static/nogod.png">
-<img src="Child/static/welcomepage.JPG">
-<img src="Child/static/profile.JPG">
+<img src="Child/static/welcomepage.png">
+<img src="Child/static/profile.png">
 <img src="Child/static/help.JPG">
 <img src="Child/static/school.JPG">
 <img src="Child/static/daycare.JPG">
