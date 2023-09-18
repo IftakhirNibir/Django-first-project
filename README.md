@@ -12,6 +12,6 @@
 <img src="Child/static/help.png">
 <img src="Child/static/school.png">
 <img src="Child/static/daycare.png">
-<img src="Child/static/products.JPG">
-<img src="Child/static/ordered.JPG">
+<img src="Child/static/products.png">
+<img src="Child/static/ordered.png">
 <img src="Child/static/orderstatus.JPG">
