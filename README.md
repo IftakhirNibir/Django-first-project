@@ -4,7 +4,7 @@
 <img src="Child/static/about.png">
 <img src="Child/static/blog.png">
 <img src="Child/static/blog2.png">
-<img src="Child/static/videos.JPG">
+<img src="Child/static/videos.png">
 <img src="Child/static/payment.JPG">
 <img src="Child/static/nogod.JPG">
 <img src="Child/static/welcomepage.JPG">
