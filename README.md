@@ -10,8 +10,8 @@
 <img src="Child/static/welcomepage.png">
 <img src="Child/static/profile.png">
 <img src="Child/static/help.png">
-<img src="Child/static/school.JPG">
-<img src="Child/static/daycare.JPG">
+<img src="Child/static/school.png">
+<img src="Child/static/daycare.png">
 <img src="Child/static/products.JPG">
 <img src="Child/static/ordered.JPG">
 <img src="Child/static/orderstatus.JPG">
