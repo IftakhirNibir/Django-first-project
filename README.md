@@ -1,6 +1,6 @@
 # Child Care
 <h3>All feature UI images from our website are shown below</h3>
-<img src="Child/static/homepage.JPG">
+<img src="Child/static/homepage.png">
 <img src="Child/static/about.JPG">
 <img src="Child/static/events.JPG">
 <img src="Child/static/blog.JPG">
