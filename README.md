@@ -14,4 +14,4 @@
 <img src="Child/static/daycare.png">
 <img src="Child/static/products.png">
 <img src="Child/static/ordered.png">
-<img src="Child/static/orderstatus.JPG">
+<img src="Child/static/orderstatus.png">
