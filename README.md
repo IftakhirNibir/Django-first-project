@@ -5,8 +5,8 @@
 <img src="Child/static/blog.png">
 <img src="Child/static/blog2.png">
 <img src="Child/static/videos.png">
-<img src="Child/static/payment.JPG">
-<img src="Child/static/nogod.JPG">
+<img src="Child/static/payment.png">
+<img src="Child/static/nogod.png">
 <img src="Child/static/welcomepage.JPG">
 <img src="Child/static/profile.JPG">
 <img src="Child/static/help.JPG">
